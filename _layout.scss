@@ -26,7 +26,7 @@ body {
 }
 
 #accueil {
-  background-color: var(--couleur-arriere-accueil);
+  background-color: var(--couleur-accueil);
   color: rgba(#313f5c, var(--transparence-h1-valeur));
 }
 
@@ -36,26 +36,26 @@ body {
 }
 
 #entete {
-  // background-color: var(--couleur-arriere-entete);
-  color: var(--transparence-h);
-  background-image: url(https://img.freepik.com/photos-gratuite/belles-fleurs-gouttes-eau_23-2150705688.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: opacity(80%);
+  background-color: var(--couleur-entete);
+  color: var(--couleur-entete);
+  // background-image: url(https://img.freepik.com/photos-gratuite/belles-fleurs-gouttes-eau_23-2150705688.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // filter: opacity(80%);
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
+  background-color: var(--couleur-evenement);
   color: rgba(#31565c, var(--transparence-h1-valeur));
 }
 
 #galerie {
   height: var(--valeur-largeur-galerie);
-  background-color: var(--couleur-arriere-galerie);
+  background-color: var(--couleur-galerie);
   color: rgba(#31335c, var(--transparence-h1-valeur));
 }
 
 #footer {
-  background-color: var(--couleur-arriere-footer);
+  background-color: var(--couleur-footer);
   color: rgba(#ffffff, var(--transparence-h1-valeur));
 }
