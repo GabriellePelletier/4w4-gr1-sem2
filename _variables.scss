@@ -1,0 +1,16 @@
+:root {
+  // Couleur d'arrière plan
+  --couleur-arriere-entete: #7078be83;
+  --couleur-arriere-accueil: #5781ae85;
+  --couleur-arriere-evenement: #63b1bb82;
+  --couleur-arriere-galerie: #646dba7d;
+  --couleur-arriere-footer: #0d090da4;
+
+  // Couleur de transparence des titres
+  --transparence-h: rgba(17, 22, 43, 0.631);
+  --transparence-h1-valeur: 0.7;
+  --transparence-section: 0.3;
+
+  // Zone de la Galerie est plus grande que les autres
+  --valeur-largeur-galerie: 70vw;
+}
