@@ -12,15 +12,36 @@ Text Domain: theme-gabrielle
 
 */
 :root {
-  --couleur-arriere-entete: #7078be83;
-  --couleur-arriere-accueil: #5781ae85;
-  --couleur-arriere-evenement: #63b1bb82;
-  --couleur-arriere-galerie: #646dba7d;
-  --couleur-arriere-footer: #0d090da4;
-  --transparence-h: rgba(17, 22, 43, 0.631);
+  --transparence-h: rgba(255, 255, 255, 0.523);
   --transparence-h1-valeur: 0.7;
   --transparence-section: 0.3;
   --valeur-largeur-galerie: 70vw;
+  --u1: 70;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30);
+  /* La saturation */
+  --s-arriere: 100%;
+  --s-avant: 50%;
+  /* La luminosité */
+  --l-arriere: 30%;
+  ---avant: 20%;
+  /* Couleur d'arrière plan */
+  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-accueil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement: hsl(
+    var(--u3),
+    var(--s-arriere),
+    var(--l-arriere)
+  );
+  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  /* Couleur d'avant plan - background-color */
+  --couleur-entete: hsl(var(--u1), var(--s-avant), var(--avant));
+  --couleur-accueil: hsl(var(--u2), var(--s-avant), var(--avant));
+  --couleur-evenement: hsl(var(--u3), var(--s-avant), var(--avant));
+  --couleur-galerie: hsl(var(--u4), var(--s-avant), var(--avant));
+  --couleur-footer: hsl(var(--u1), var(--s-avant), var(--avant));
 }
 
 * {
@@ -50,7 +71,7 @@ body {
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
-  color: rgba(49, 63, 92, var(--transparence-h1-valeur));
+  color: var(--transparence-h);
 }
 
 #entete,
@@ -59,27 +80,25 @@ body {
 }
 
 #entete {
+  background-color: var(--couleur-arriere-entete);
   color: var(--transparence-h);
-  background-image: url(https://img.freepik.com/photos-gratuite/belles-fleurs-gouttes-eau_23-2150705688.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: opacity(80%);
+  position: relative;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
-  color: rgba(49, 86, 92, var(--transparence-h1-valeur));
+  color: var(--transparence-h);
 }
 
 #galerie {
-  height: var(--valeur-largeur-galerie);
   background-color: var(--couleur-arriere-galerie);
-  color: rgba(49, 51, 92, var(--transparence-h1-valeur));
+  height: var(--valeur-largeur-galerie);
+  color: var(--transparence-h);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
-  color: rgba(255, 255, 255, var(--transparence-h1-valeur));
+  color: var(--transparence-h);
 }
 
 h1 {
@@ -107,4 +126,46 @@ h5 {
 
 h6 {
   color: var(--transparence-h);
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-evenement);
+}
+
+.vague2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 216px;
+  transform: rotateY(180deg);
+}
+
+.vague2 .shape-fill {
+  fill: var(--transparence-h);
 }/*# sourceMappingURL=style.css.map */
